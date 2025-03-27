@@ -32,7 +32,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O DevLinks é um agregaddor dde links para usar como cartão dde visitas online.
+O DevLinks é um agregador dde links para usar como cartão dde visitas online.
 
 ## 🔖 Layout
 
@@ -41,4 +41,3 @@ Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figm
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT.
-

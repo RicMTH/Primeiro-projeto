@@ -6,12 +6,11 @@
 /*variavel criada para deixar o site no modo original */
 :root {
   --text-color: white;
-
   --bg-url: url(./assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.2);
-  --highlight-color: rgba(255, 255, 255, 0.2);
+  --hightlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/moon-stars.svg);
 }
 
@@ -23,6 +22,7 @@
   --bg-url: url(./assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
   --hightlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/sun.svg);
 }
@@ -47,10 +47,9 @@ body * {
 #container {
   width: 360px; /* definindo a largura do bloco*/
   margin: 80px auto 0px; /* definindo a posicao do bloco*/
-  padding: 0px 24px;
+  padding: 0px 24px; /* preenchimento interno do bloco */
 }
 
-/* profile */
 #profile {
   text-align: center; /* Centralizando o bloco profile que neste caso tratase de uma imagem(ou seja display inline) 
   com este comando centralizando a imagem dentro do bloco*/
@@ -60,6 +59,7 @@ body * {
 
 #profile img {
   width: 112px;
+  border-radius: 50%;
 }
 
 #profile p {
@@ -70,7 +70,7 @@ body * {
 #switch {
   position: relative;
   width: 64px;
-  margin: 4px 98px;
+  margin: 4px auto;
 }
 
 /* Switch */
@@ -83,7 +83,7 @@ body * {
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  right: 0;
+  left: 0;
   z-index: 1;
   transform: translateY(-50%);
 }

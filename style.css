@@ -37,6 +37,8 @@ body {
   */
   /*background: color image repeat position/size */
   background: var(--bg-url) no-repeat top center/cover;
+  
+  height: 100vh; /* definindo a altura do body */ 
 }
 
 body * {
@@ -45,7 +47,9 @@ body * {
 }
 
 #container {
-  width: 360px; /* definindo a largura do bloco*/
+  width: 100%; /* definindo a largura do bloco*/
+  max-width: 588px; /* definindo a largura maxima do bloco*/
+
   margin: 80px auto 0px; /* definindo a posicao do bloco*/
   padding: 0px 24px; /* preenchimento interno do bloco */
 }
@@ -157,4 +161,14 @@ ul li a:hover {
 }
 #social-links a:hover {
   background: var(--hightlight-color);
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }

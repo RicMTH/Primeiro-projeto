@@ -37,8 +37,8 @@ body {
   */
   /*background: color image repeat position/size */
   background: var(--bg-url) no-repeat top center/cover;
-  
-  height: 100vh; /* definindo a altura do body */ 
+
+  height: 100vh; /* definindo a altura do body */
 }
 
 body * {
@@ -90,10 +90,13 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+  animation: slide-back 0.3s;
 }
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards; /* animação do botao quando o modo light for ativado */
+}
+#switch button:hover {
+  outline: 8px solid var(--hightlight-color);
 }
 
 /* Estilizando Botao que fica no fundo so sol*/
@@ -162,7 +165,7 @@ ul li a:hover {
 #social-links a:hover {
   background: var(--hightlight-color);
 }
-
+/* condicional quando o display for maaior que 700px */
 @media (min-width: 700px) {
   :root {
     --bg-url: url(./assets/bg-desktop.jpg);
@@ -170,5 +173,24 @@ ul li a:hover {
 
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* animação do botao*/
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+/* animação do botao quando o modo light for desativado */
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
